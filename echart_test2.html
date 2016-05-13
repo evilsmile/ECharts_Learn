@@ -22,7 +22,7 @@ echarts.config = require('echarts/config')， zrender.tool.color = require('zren
 					title: {
 						backgroundColor : '#123123',
 						color : '#323333',
-						text: '衣物统计',
+						text: '衣物统计数据',
 						subtext: 'Faked',
 						x: 'right',
 						sublink: 'www.baidu.com',
@@ -64,6 +64,7 @@ echarts.config = require('echarts/config')， zrender.tool.color = require('zren
 							true
 						]
 					]);
+				// 设置监听事件
 				var econfig = echarts.config;
 				function eConsole(param) {
 					var mes = '[' + param.type + ']';
@@ -85,6 +86,7 @@ echarts.config = require('echarts/config')， zrender.tool.color = require('zren
 				myChart.on(econfig.EVENT.MAGIC_TYPE_CHANGED, eConsole);
 				
 				//myChart.clear();
+
 				document.write('<h1>' + myChart.getOption().series +'</h1>');
 				
 				//---------------- 2 ---------------------
